@@ -7,9 +7,21 @@
             "data",
             "apps",
             "res",
-            "filepath", 
+            "filepath",
             "binfolder",
             "srcfolder"
+        ]
+    },
+    "cd": {
+        "help": "I'll change your directory for you",
+        "creator": "LoXewyX",
+        "version": "0.0.1",
+        "args": [
+            "data",
+            "res",
+            "srcfolder",
+            "dirpath",
+            "root"
         ]
     },
     "clear": {
@@ -46,8 +58,19 @@
             "res"
         ]
     },
+    "ls": {
+        "help": "I'll list all your directory's content",
+        "creator": "LoXewyX",
+        "version": "0.0.1",
+        "args": [
+            "data",
+            "res",
+            "dirpath",
+            "root"
+        ]
+    },
     "list": {
-        "help": "I'll fetch all your content",
+        "help": "I'll fetch all your apps content",
         "creator": "LoXewyX",
         "version": "0.0.1",
         "args": [
@@ -56,26 +79,19 @@
             "res"
         ]
     },
-    "purge": {
-        "help": "Let me erase all your files",
-        "creator": "LoXewyX",
-        "version": "0.0.1",
-        "args": [
-            "data"
-        ]
-    },
-    "setname": {
-        "help": "Let's introduce us",
+    "mkdir": {
+        "help": "I'll create you a directory folder",
         "creator": "LoXewyX",
         "version": "0.0.1",
         "args": [
             "data",
             "res",
-            "srcfolder"
+            "dirpath",
+            "root"
         ]
     },
-    "supersede": {
-        "help": "I'll move your files for you",
+    "purge": {
+        "help": "Let me erase all your apps",
         "creator": "LoXewyX",
         "version": "0.0.1",
         "args": [
@@ -85,6 +101,69 @@
             "filepath",
             "binfolder",
             "srcfolder"
+        ]
+    },
+    "pwd": {
+        "help": "I'll tell you where are you",
+        "creator": "LoXewyX",
+        "version": "0.0.1",
+        "args": [
+            "data",
+            "srcfolder",
+            "root"
+        ]
+    },
+    "read": {
+        "help": "I'll read all your files",
+        "creator": "LoXewyX",
+        "version": "0.0.1",
+        "args": [
+            "data",
+            "res",
+            "dirpath",
+            "root"
+        ]
+    },
+    "rm": {
+        "help": "I'll remove all your data from your directory",
+        "creator": "LoXewyX",
+        "version": "0.0.1",
+        "args": [
+            "data",
+            "res",
+            "dirpath",
+            "root"
+        ]
+    },
+    "run": {
+        "help": "I'll run you a command from your bash",
+        "creator": "LoXewyX",
+        "version": "0.0.1",
+        "args": [
+            "data",
+            "res"
+        ]
+    },
+    "setname": {
+        "help": "Let's introduce us",
+        "creator": "LoXewyX",
+        "version": "0.0.1",
+        "args": [
+            "data",
+            "res",
+            "srcfolder",
+            "dirpath"
+        ]
+    },
+    "supersede": {
+        "help": "I'll move or rename your files for you",
+        "creator": "LoXewyX",
+        "version": "0.0.1",
+        "args": [
+            "data",
+            "res",
+            "dirpath",
+            "root"
         ]
     },
     "version": {
@@ -97,12 +176,13 @@
             "res"
         ]
     },
-    "x": {
-        "help": "Test one - Acquire",
-        "creator": "LoXewyX - temp",
+    "xplore": {
+        "help": "I'll open your explorer and search whatever you want",
+        "creator": "LoXewyX",
         "version": "0.0.1",
         "args": [
-            "data"
+            "data",
+            "res"
         ]
     }
 }
