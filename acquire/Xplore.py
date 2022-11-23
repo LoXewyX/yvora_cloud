@@ -6,8 +6,8 @@ import utils.Fancyprint
 class Xplore():
     def __init__(self, data, res):
         
-        def redirect(res):
-            URL = res[1] if 'www' in res[1] else 'www.%s' % res[1]
+        def redirect(txt):
+            URL = txt if 'www' in txt else f'www.{txt}'
             webbrowser.get().open(URL)
         
         utils.Fancyprint.data = data
@@ -35,7 +35,7 @@ class Xplore():
                 redirect(d)
         
         elif len(res) == 2:
-            redirect(res)
+            redirect(res[1])
             
         else:
             pc()
