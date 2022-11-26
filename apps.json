@@ -40,6 +40,17 @@
         "help": "I'll tell you who created this",
         "version": "0.0.1"
     },
+    "cypher": {
+        "args": [
+            "data",
+            "res",
+            "dirpath",
+            "root"
+        ],
+        "creator": "LoXewyX",
+        "help": "I'll encrypt your files",
+        "version": "0.0.1"
+    },
     "hello": {
         "args": [
             "data"
@@ -187,6 +198,16 @@
         ],
         "creator": "LoXewyX",
         "help": "I'll move or rename your files for you",
+        "version": "0.0.1"
+    },
+    "version": {
+        "args": [
+            "data",
+            "apps",
+            "res"
+        ],
+        "creator": "LoXewyX",
+        "help": "I'll show you the app version",
         "version": "0.0.1"
     },
     "xplore": {
