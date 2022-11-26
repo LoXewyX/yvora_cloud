@@ -49,6 +49,7 @@ class Purge():
                 keyboard.unregister_hotkey('ctrl+x')
                 keyboard.press('enter')
             except Exception: pass
+        keyboard.add_hotkey('ctrl+x', lambda: quitKH())
         
         def erase():
             global force
@@ -59,7 +60,7 @@ class Purge():
                     d_temp = apps
                     del d_temp[res[1]]
                     with open(appspath, 'w') as f: 
-                        json.dump(d_temp, f, indent=4)
+                        json.dump(d_temp, f, indent=4, sort_keys=True)
                     pc()
                     print('apps.json was updated')
                 except:
@@ -86,8 +87,6 @@ class Purge():
         force = False
         exitHK = False
         noAsk = False
-        
-        keyboard.add_hotkey('ctrl+x', lambda: quitKH())
         
         if len(res) >= 3:
             types = {
@@ -118,6 +117,5 @@ class Purge():
             pc()
             res.append(input('Introduce your package you wish to purge: '))
             if not exitHK:
-                pc()
                 erase() if ask() else desist()
             

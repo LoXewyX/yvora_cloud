@@ -56,7 +56,7 @@ class Setname():
                     print('Your name was changed to \'%s\'' % res[2])
                 
                 with open(route, 'w') as f:
-                    json.dump(data, f, indent=4)
+                    json.dump(data, f, indent=4, sort_keys=True)
             else:
                 pc()
                 print(f'{col.WARNING}The only existent users are {col.ENDC}pc {col.WARNING}and{col.ENDC} user')

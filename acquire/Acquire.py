@@ -26,6 +26,7 @@ class Acquire():
                 keyboard.unregister_hotkey('ctrl+x')
                 keyboard.press('enter')
             except Exception: pass
+        keyboard.add_hotkey('ctrl+x', lambda: quitKH())
         
         def give(f=False):
             if res[1] in remoteApps:
@@ -50,21 +51,18 @@ class Acquire():
         def write():
             with urllib.request.urlopen('https://raw.githubusercontent.com/LoXewyX/yvora_cloud/main/acquire/%s.py' % res[1].capitalize()) as url:
                 with open('%s.py' % os.path.join(path, binfolder, res[1].capitalize()), 'w') as f:
-                    f.write(url.read().decode('utf-8').replace('\n', ''))
+                    f.write(url.read().decode('utf-8').rstrip())
             
-            w = apps
-            w.update({res[1]: remoteApps[res[1]]})
+            apps.update({res[1]: remoteApps[res[1]]})
             
             with open(os.path.join(path, srcfolder, 'apps.json'), 'w') as f:
-                json.dump(w, f, indent=4)
+                json.dump(apps, f, indent=4, sort_keys=True)
         
         global remoteApps, exitHK
         exitHK = False
         
         with urllib.request.urlopen('https://raw.githubusercontent.com/LoXewyX/yvora_cloud/main/apps.json') as url:
             remoteApps = json.load(url)
-        
-        keyboard.add_hotkey('ctrl+x', lambda: quitKH())
         
         if len(res) > 2:
             types = {
